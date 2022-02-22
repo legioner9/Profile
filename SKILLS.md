@@ -12,8 +12,8 @@
 | 🟦 constant          | 🟨 prototype          | 🟦 signature          | 🟦 collection       | 🟦 paradigm          |
 | 🟦 scalar            | 🟦 class              | 🟦 argument           | 🟦 hash table       | 🟦 algorithm         |
 | 🟦 literal           | 🟦 while              | 🟦 parameter          | 🟦 linked list      | 🟦 magic numbers     |
-| 🟦 expression        | 🟦 do..while          | 🟦 pure               | 🟦 queue            | 🟦 hardcode          |
-| 🟦 heap              | 🟦 for                | 🟦 function           | 🟦 stack            | 🟦 complexity        |
+| 🟦 expression        | 🟦 do..while          | 🟦 pure function      | 🟦 queue            | 🟦 hardcode          |
+| 🟦 heap              | 🟦 for                | 🟦 lambda             | 🟦 stack            | 🟦 complexity        |
 | 🟦 type              | 🟨 for..in            | 🟦 side effects       | 🟦 deque            | 🟦 decomposition     |
 | 🟦 primitive types   | 🟨 for..of            | 🟦 closure            | 🟦 serialization    | ⬜️ spaghetti         |
 | 🟦 reference         | 🟨 for await          | 🟦 partial            | 🟦 mixin, extend    | ⬜️ silver bullet     |
@@ -28,7 +28,7 @@
 | 🟨 call, bind, apply |                       | 🟦 pool               | 🟨 timers           | 🟦 unittest          |
 | 🟨 Array             |                       | 🟦 wrapper            | 🟨 EventEmitter     | 🟦 git               |
 | 🟨 instanceof        |                       | 🟨 default parameters | 🟨 RegExp           | 🟦 github            |
-| 🟨 ...spread         |                       | 🟦 lambda             | 🟨 global           | 🟨 node.js           |
+| 🟨 ...spread         |                       |                       | 🟨 global           | 🟨 node.js           |
 | 🟨 ...rest           |                       |                       | 🟨 undefined        | 🟨 npm               |
 | 🟨 typeof            |                       |                       | 🟦 null             |                      |
 
@@ -37,7 +37,7 @@
 | Theory                         | OOP basics            | Arstractions         | Patterns                 |
 |--------------------------------|-----------------------|----------------------|--------------------------|
 | 🟦 Procedural programming      | 🟦 constructor        | ⬜ struct, record    | 🟦 Singleton             |
-| 🟦 Imperative programming      | 🟦 new                | ⬜ Mutable state     | ⬜ Revealing Constructor |
+| 🟦 Imperative programming      | 🟦 new                | ⬜ Mutable state     |                          |
 | 🟦 Structured programming      | 🟦 Static method      | ⬜ Immutable state   |                          |
 | 🟦 Non-structured programming  | 🟦 Method             | ⬜ Enum              |                          |
 | 🟦 Functional programming      | 🟦 Async method       | 🟦 Linked list       |                          |
@@ -59,27 +59,27 @@
 
 ## Asynchronous programming
 
-| Async contracts        | JavaScript & Node.js specific  | Theory              | Techniques            |
-|------------------------|--------------------------------|---------------------|-----------------------|
-| 🟦 Callback-last       | 🟦 Timers                      | 🟦 Event Loop       | ⬜ async.js library   |
-| 🟦 Error-first         | 🟦 setImmediate                | 🟦 Async error      | ⬜ Async composition  |
-| 🟦 Promise             | 🟦 nextTick                    | 🟦 try..catch       | ⬜ Rx.js              |
-| 🟦 Async function      | ⬜ AbortController             | 🟦 Non-blocking     | 🟦 Sequential async   |
-| 🟦 await               | 🟦 Promise unhandled rejection | 🟦 Async I/O        | 🟦 Parallel async     |
-| 🟦 Generator           | 🟦 Promise double resolve      | 🟦 Pattern Reactor  | 🟦 Promise.all        |
-| 🟦 Async Generator     | 🟦 child_process               | ⬜ CAS operations   | 🟦 Promise.allSettled |
-| 🟦 Async Iterator      | 🟦 worker_threads              | ⬜ epoll            | 🟦 Promise.race       |
-| 🟦 Thenable            | 🟦 Atomics                     | ⬜ kqueue           | 🟦 Promise.any        |
-| 🟦 EventEmitter        | 🟦 Blockeing operations        | ⬜ Completion ports | ⬜ Web Locks API      |
-| ⬜ Cancelable callback | 🟦 Non-blocking loop for Array | ⬜ Event ports      | ⬜ Async Pool         |
-| ⬜ Cancelable Promise  | ⬜ High resolution clock       | 🟦 libuv            | ⬜ Thread Pool        |
-| 🟦 Asynchronous Queue  | 🟦 Callback hell               | 🟦 Race conditions  | 🟦 callbackify        |
-| ⬜ Future              | 🟦 Promise hell                | 🟦 Dead locks       | 🟦 promisify          |
-| ⬜ Deferred            |                                | 🟦 Live locks       | ⬜ IPC                |
-| 🟦 Observer            |                                | ⬜ Actor Model      | ⬜ Channel API        |
-| ⬜ Async Collector     |                                |                     |                       |
-| ⬜ Coroutine           |                                |                     |                       |
-| ⬜ Goroutine           |                                |                     |                       |
+| Async contracts        | JavaScript & Node.js specific  | Theory              | Techniques               |
+|------------------------|--------------------------------|---------------------|--------------------------|
+| 🟦 Callback-last       | 🟦 Timers                      | 🟦 Event Loop       | ⬜ async.js library      |
+| 🟦 Error-first         | 🟦 setImmediate                | 🟦 Async error      | ⬜ Async composition     |
+| 🟦 Promise             | 🟦 nextTick                    | 🟦 try..catch       | ⬜ Rx.js                 |
+| 🟦 Async function      | ⬜ AbortController             | 🟦 Non-blocking     | 🟦 Sequential async      |
+| 🟦 await               | 🟦 Promise unhandled rejection | 🟦 Async I/O        | 🟦 Parallel async        |
+| 🟦 Generator           | 🟦 Promise double resolve      | 🟦 Pattern Reactor  | 🟦 Promise.all           |
+| 🟦 Async Generator     | 🟦 child_process               | ⬜ CAS operations   | 🟦 Promise.allSettled    |
+| 🟦 Async Iterator      | 🟦 worker_threads              | ⬜ epoll            | 🟦 Promise.race          |
+| 🟦 Thenable            | 🟦 Atomics                     | ⬜ kqueue           | 🟦 Promise.any           |
+| 🟦 EventEmitter        | 🟦 Blockeing operations        | ⬜ Completion ports | ⬜ Web Locks API         |
+| ⬜ Cancelable callback | 🟦 Non-blocking loop for Array | ⬜ Event ports      | ⬜ Async Pool            |
+| ⬜ Cancelable Promise  | ⬜ High resolution clock       | 🟦 libuv            | ⬜ Thread Pool           |
+| 🟦 Asynchronous Queue  | 🟦 Callback hell               | 🟦 Race conditions  | 🟦 callbackify           |
+| ⬜ Future              | 🟦 Promise hell                | 🟦 Dead locks       | 🟦 promisify             |
+| ⬜ Deferred            |                                | 🟦 Live locks       | ⬜ IPC                   |
+| 🟦 Observer            |                                | ⬜ Actor Model      | ⬜ Channel API           |
+| ⬜ Async Collector     |                                |                     | ⬜ Revealing Constructor |
+| ⬜ Coroutine           |                                |                     |                          |
+| ⬜ Goroutine           |                                |                     |                          |
 
 ## Node.js and backend
 
