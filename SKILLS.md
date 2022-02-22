@@ -6,7 +6,7 @@
 
 | Syntax               | Statements            | Functions             | Data structures     | Process & style      |
 |----------------------|-----------------------|-----------------------|---------------------|----------------------|
-| 🟦 value             | 🟦 if                 | 🟦 recursion          | 🟦 array            | 🟦 refactoring       |
+| 🟩 value             | 🟦 if                 | 🟦 recursion          | 🟦 array            | 🟦 refactoring       |
 | 🟦 identifier        | 🟦 loops              | 🟦 function           | 🟦 instance         | 🟦 code review       |
 | 🟦 variable          | 🟦 assignment         | 🟦 return             | 🟦 object           | 🟦 antipatterns      |
 | 🟦 constant          | 🟨 prototype          | 🟦 signature          | 🟦 collection       | 🟦 paradigm          |
